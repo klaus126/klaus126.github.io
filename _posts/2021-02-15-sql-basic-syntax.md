@@ -123,7 +123,7 @@ SELECT nameFirst || ' ' || nameLast AS name FROM People LIMIT 10;
 
 #### DISTINCT : unique contents
 
-```sqlite
+``` sql
 -- Unique filter
 SELECT COUNT(*) FROM People;
 
@@ -133,7 +133,7 @@ SELECT COUNT(DISTINCT(nameFirst || ' ' || nameLast)) FROM People;
 
 #### GROUP BY
 
-``` sqlite
+``` sql
 SELECT nameFirst || ' ' || nameLast AS name, COUNT(*)
 FROM People
 GROUP BY name
@@ -146,7 +146,7 @@ ORDER BY COUNT(*) DESC;
 
 
 
-``` sqlite
+``` sql
 -- 각 팀의 연도별 salary 총합을 구하고, 내림차순으로 표시
 SELECT 
 	teamID, 
@@ -170,7 +170,7 @@ ORDER BY
 
 #### JOIN
 
-```sqlite
+``` sql
 -- 각 선수의 풀네임을 만들고 연봉별 내림차순으로 만드시오.
 SELECT
         t2.nameFirst || ' ' || t2.nameLast AS name,
@@ -183,7 +183,7 @@ SELECT
     LIMIT 20;
 ```
 
-```sqlite
+``` sql
 -- 2010년의 연봉이 높은 순서대로 팀/이름/연봉을 출력하시오.
 -- Top paid player for each team in 2010
     SELECT
@@ -208,7 +208,7 @@ SELECT
 
 #### INNER JOIN
 
-```sqlite
+``` sql
 SELECT <fields>
 FROM TableA A
 INNER JOIN TableB B
@@ -219,14 +219,14 @@ ON A.key = B.key
 
 #### LEFT JOIN : B에는 없을수도 있으나, A에 있다면 다 가져오겠다.
 
-```sqlite
+``` sql
 SELECT <fields>
 FROM TableA A
 LEFT JOIN TableB B
 ON A.key = B.key
 ```
 
-```sqlite
+``` sql
 SELECT <fields>
 FROM TableA A
 LEFT JOIN TableB B
@@ -234,7 +234,7 @@ ON A.key = B.key
 WHERE B.key IS NULL -- B에 null값이 있다면 빼줘.
 ```
 
-```sqlite
+``` sql
 -- 전체 플레이어(People t1) 중에서 올스타이력(AllstarFull t2)이 있는 플레이어ID를 뽑고, COUNT(*)순으로 내림차순으로 정렬
 SELECT
     t1.playerID,
@@ -247,7 +247,7 @@ GROUP BY 1
 ORDER BY COUNT(*) DESC LIMIT 20;
 ```
 
-```sqlite
+``` sql
 -- 선수 이름별로 올스타 선정된 횟수 내림차순으로 정리
 SELECT
     t2.playerID,
@@ -265,7 +265,7 @@ ORDER BY COUNT(*) DESC LIMIT 20;
 
 ### LEFT JOIN 3개 이상 할 경우
 
-```sqlite
+``` sql
 -- 선수 이름별로 올스타 선정된 횟수, 연봉 / 올스타 횟수별 내림차순으로 정리
 SELECT
     t2.playerID,
@@ -282,7 +282,7 @@ GROUP BY 1
 ORDER BY COUNT(*) DESC LIMIT 20; 
 ```
 
-```sqlite
+``` sql
 -- 선수 이름별로 올스타 선정된 횟수, 연봉/ 연봉별 내림차순으로 정리
 SELECT
     t2.playerID,
