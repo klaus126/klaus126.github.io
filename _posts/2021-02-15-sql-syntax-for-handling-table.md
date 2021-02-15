@@ -38,7 +38,7 @@ paginate: false
 
 - creates a new table
 
-```sqlite
+```sql
 -- CREATE TABLE 테이블명 (칼럼명 칼럼데이터타입, 칼럼명 칼럼데이터타입 );
 CREATE TABLE mytable (id INT, name VARCHAR(255), debut DATE);
 
@@ -52,7 +52,7 @@ CREATE TABLE mytable2 (id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(255), 
 
 - inserts new data into a database
 
-```sqlite
+```sql
 -- mytable2에 데이터 넣기
 INSERT INTO mytable2 (name, debut) VALUES ('hae', '2020-03-16');
 
@@ -66,7 +66,7 @@ SELECT * FROM mytalbe2
 
 - updates data in a database
 
-```sqlite
+```sql
 -- UPDATE 테이블명 SET 변경할칼럼명 = '변경할칼럼값' WHERE 조건
 UPDATE mytable2
 SET debut = '2010-09-01'
@@ -79,7 +79,7 @@ WHERE id = 1234
 
 - replace data in a database
 
-```sqlite
+```sql
 REPLACE INTO mytable2 (id, name, debut) VALUES (6, 'fefe', '2019-04-11');
 ```
 
@@ -89,7 +89,7 @@ REPLACE INTO mytable2 (id, name, debut) VALUES (6, 'fefe', '2019-04-11');
 
 - Insert data. If data already exists, ignore it.
 
-```sqlite
+```sql
 -- 있으면 무시하고, 없으면 INSERT : 가장 많이 쓰여지는 것중 하나
 INSERT OR IGNORE INTO mytable2 (id, name, debut) VALUES (1, 'fepe', '2019-04-13');
 
@@ -102,7 +102,7 @@ INSERT OR IGNORE INTO mytable2 (id, name, debut) VALUES (1, 'fepe', '2019-04-13'
 
 - deletes data from a database
 
-``` sqlite
+``` sql
 -- DELETE FROM 테이블명 WHERE 조건
 DELETE FROM mytable2 WHERE id=1;
 ```
@@ -113,7 +113,7 @@ DELETE FROM mytable2 WHERE id=1;
 
 - modifies a table
 
-```sqlite
+```sql
 -- ALTER TABLE 테이블명 RENAME TO 변경할테이블명;
 ALTER TABLE mytable2 RENAME TO players; -- mytable2가 players로 대체됨
 
@@ -127,7 +127,7 @@ ALTER TABLE players ADD COLUM DOB date;
 
 - deletes a table
 
-```sqlite
+```sql
 -- DROP TABLE 테이블명;
 DROP TABLE mytable; -- mytable이 사라짐
 ```
