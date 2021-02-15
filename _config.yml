@@ -1,8 +1,7 @@
 # Site Settings
-name: Jekflix
-title: Jekflix | A blog theme for Jekyll
-description: Jekflix is a template for Jekyll inspired by Netflix and made by
-  Thiago Rossener.
+name: Klausflix
+title: Klausflix | A blog theme for everyone
+description: This is a tech blog
 tags:
   - blog
   - template
