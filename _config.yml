@@ -32,6 +32,9 @@ linkedin_username: none
 medium_username: none
 
 
+# Set timezone
+timezone: Asia/Seoul
+
 # Posts Settings
 show_time_bar: true
 show_modal_on_exit: false
