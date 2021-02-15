@@ -114,8 +114,8 @@ menu:
     url: /
   - title: About
     url: /about
-  - title: Contact
-    url: /contact
+  - title: Tags
+    url: /tags
   - title: Feed
     url: /feed.xml
 
