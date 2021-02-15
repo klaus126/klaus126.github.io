@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Tips
-slug: tips
-description: A category for tips.
+title: Database
+slug: database
+description: A category for database related post.
 ---
