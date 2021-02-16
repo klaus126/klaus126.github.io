@@ -81,14 +81,38 @@ python get-pip.py
 ### 상황파악
 
 - 침착하게 상황을 생각해보자.
+
   - 현재 pip 가 존재하는데, path설정이 안되어있는지
+
   - pip가 아예 날아가버린 것인지
-    - <img src="/Users/jonghae/Library/Application Support/typora-user-images/image-20210216101433708.png" alt="image-20210216101433708" style="zoom:30%;" />
+
+    - ```bash
+      which pip
+      # /Users/my-home/Library/Python/3.7/bin/pip
+      ```
+
     - 아주 잘 존재한다. 추가적으로 python과 pip의 위치를 확인해보자
-      - <img src="/Users/jonghae/Library/Application Support/typora-user-images/image-20210216101406519.png" alt="image-20210216101406519" style="zoom:30%;" />
+
+      - ```bash
+        which python
+        # /usr/bin/python
+        
+        which python3
+        # /Library/Frameworks/Python.framework/Version/3.9/bin/python3
+        
+        which pip
+        # /Users/my-home/Library/Python/3.7/bin/pip
+        
+        which pip3
+        # /Users/my-home/Library/Python/3.7/bin/pip3
+        
+        which jupyter
+        # /Library/Frameworks/Python.framework/Version/3.9/bin/jupyter
+        ```
+
     - 해당 위치에 존재는 하지만, path 설정이 변한듯 하다. zshrc / zprofile의 path 설정으로 현재 상태를 살펴본 결과 python, jupyter path 둘다 변해 있음을 확인했다.
 
-<img src="/Users/jonghae/Library/Application Support/typora-user-images/Screen Shot 2021-02-16 at 1.39.59 PM.png" alt="Screen Shot 2021-02-16 at 1.39.59 PM" style="zoom:40%;" />
+
 
 
 
@@ -143,7 +167,7 @@ python get-pip.py
 
   상기 코드를 확인하고, 어제 설치했던 CommandLineTools가 환경 변수에 영향을 끼친게 아닐까라는 가설을 세워본다. 구글링을 해보니 재밌는 포럼글이 있었다.
 
-<img src="/Users/jonghae/Library/Application Support/typora-user-images/Screen Shot 2021-02-16 at 9.31.38 PM.png" alt="Screen Shot 2021-02-16 at 9.31.38 PM" style="zoom:50%;" />
+![screenshot](./site/assets/../../../assets/postimg/Screen%20Shot%202021-02-16%20at%2010.01.19%20PM.png)
 
   동일한 증상이다. 질문자는 pip를 수동으로 업그레이드(`pip install --upgrade pip`)하다가 문제를 만났고, Xcode 11.2가 설치되기전까지는 잘 사용했다고 한다. Xcode 설치 후 오류를 만났고, 이후 pip를 제거하고, Xcode설치시 따라오는 /usr/bin 하위 디렉토리에 설치된 pip를 사용해서 문제 해결했다고 한다. 
 
@@ -220,6 +244,8 @@ which jupyter
 ```
 jupyter notebook
 ```
+
+
 
 
 
