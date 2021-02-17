@@ -20,8 +20,6 @@ paginate: false
 
 
 
-![image-20210216093504590](/Users/jonghae/Library/Application Support/typora-user-images/image-20210216093504590.png)
-
 분명 어제까지 잘 사용했는데, 갑자기 에러가 발생하며 실행이 되지 않는다. 더불어 주피터 노트북도.. 빠르게 고쳐보자.
 
 
