@@ -32,6 +32,9 @@ iOS 앱 개발시, 다양한 **3rd party library/open source**를 사용할 때�
 
 
 
+
+
+
 ## 2. 설치
 
 ### Cocoapods 설치
@@ -55,6 +58,9 @@ brew install cocoapods
 
 
 
+
+
+
 ## 3. 사용
 
 ### `Podfile` 생성
@@ -66,6 +72,7 @@ pod init
 ```
 
 > 위 명령어를 실행하고 나면, 프로젝트 디렉토리에 `Podfile` 이 생성되어 있다. 해당 파일을 원하는 텍스트 에디터로 열고, 설치하고자 하는 `라이브러리, 버전`  등을 기록하고, 추후 `pod install` 로 라이브러리 설치를 하자.
+
 
 
 
@@ -104,6 +111,7 @@ end
 
 
 
+
 ### `pod install`
 
 - `pod install` 을 통해, `Podfile` 에 기록해두었던 라이브러리를 진행할 프로젝트에 설치하자.
@@ -113,7 +121,6 @@ pod install
 ```
 
 > `내프로젝트명.xcworkspace` 이라는 흰색 아이콘의 워크스페이스가 생성된 것을 확인할 수 있다. 이 워크스페이스를 더블클릭해서 실행해보자. 앞으로 이 워크스페이스를 통해서 작업을하면 된다. 
-
 
 
 
@@ -136,10 +143,10 @@ import Kingfisher
 
 ### how to use
 
-- Xcode project에 `Pods` 을 추가하자
-  - `Podfile` 을 만들어서 dependencies를 추가하자.
-- 프로젝트 디렉토리로 이동하여 `$ pod install` 실행
-- `App.xcworkspace`  를 실행해서 개발에 사용하자.
+- **Xcode project에 `pod init`을 통해 `Podfile` 을 생성하고, library dependencies를 추가하자.**
+- **프로젝트 디렉토리로 이동하여 `pod install` 을 통해, library들을 설치하자.**
+- **새롭게 생성된 워크스페이스(흰색 아이콘) - `App.xcworkspace`  를 실행하자.**
+- **사용할 위치에 `import 라이브러리`를 해서 사용하자**
 
 
 
