@@ -38,10 +38,6 @@ OS: macOS Big Sur version 11.1
 
 #### 안될 땐, 구글링
 
-![Screen Shot 2021-02-16 at 9.37.25 AM](/Users/jonghae/Library/Application Support/typora-user-images/Screen Shot 2021-02-16 at 9.37.25 AM.png)
-
-
-
 살펴본 해결책은 다음과 같다.
 
 
@@ -159,7 +155,10 @@ python get-pip.py
 
 
 
-- 
+
+
+
+### Round 3. Xcode Commandline Tool에 있는 python/pip 제거하기
 
   ```
   pip 19.2.3 from /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/site-packages/pip (python 3.8)

@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Algorithm
-slug: algorithm
-description: A category for algorithm related posts.
+title: Environment
+slug: environment
+description: A category for environment related posts.
 ---
