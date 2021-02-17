@@ -25,18 +25,20 @@ pip error를 잡고 나서, 텐서플로우를 설치하는데 오류가 발생�
 
 ### Error Description
 
-```
+``` zsh
 ERROR: Could not find a version that satisfies the requirement tensorflow (from versions: none)
 ERROR: No matching distribution found for tensorflow
 ```
 
 
 
-현재 필자의 OS 스펙은 다음과 같다. 
+
+
+- 현재 필자의 OS 스펙은 다음과 같다. 
 
 ### OS spec
 
-```bash
+```zsh
 OS Platform & Distribution: macOS, Big Sur, v11.1
 python version: 3.9.0
 install pakage manager: pip
@@ -47,14 +49,14 @@ virtual environment: virtualenv
 
 에러를 핸들링 해보기 위해서 다음을 시도해 보았다. 
 
-- 설치 방식 변경(`pip` / ` python -m`)
+- 설치 방식 변경(`pip` / `python -m`)
 - 설치 위치 변경(`global` / `local`)
 
 
 
 ### Trials for handling error
 
-```
+``` zsh
 # pip로 설치 시도
 pip install tensorflow --upgrade
 
@@ -80,7 +82,7 @@ python -m pip install tensorflow
 
 ##### TensorFlow System requirements
 
-```
+``` zsh
 - Python 3.5 ~ 3.8
 	- Python 3.8 support requires TensorFlow 2.2 or later.
 - pip 19.0 or later (requires manylinux2010 support)
@@ -94,9 +96,9 @@ python -m pip install tensorflow
 
 > macOS를 사용하는 사람이 중점적으로 확인할 것은 하기 요약해두었다.
 >
-> - python 3.5 ~ 3.8
-> - pip 19.0 or later
-> - macOS 10.12.6 (Sierra) or later (64-bit) (no GPU support)
+> - **python 3.5 ~ 3.8**
+> - **pip 19.0 or later**
+> - **macOS 10.12.6 (Sierra) or later (64-bit) (no GPU support)**
 
 
 
@@ -118,7 +120,7 @@ python -m pip install tensorflow
 
 ##### solution for #1.
 
-```
+``` zsh
 # 가상환경 설정
 virtualenv --python=python3.8.2 venv-name-you-want
 ```
@@ -131,7 +133,7 @@ cf. tensorflow 설치 후 numpy 설치시, `numpy==1.19.2` 와 의존성이 있�
 
 ##### solution for #2.
 
-```
+``` zsh
 # 1. using pip install
 pip install --upgrade pip
 
@@ -146,11 +148,11 @@ python get-pip.py
 
 현재 설치된 파이썬을 삭제하고, 새로운 파이썬을 설치하자
 
-```bash
+``` zsh
 brew install python3
 ```
 
-```bash
+``` zsg
 which python3
 ```
 
