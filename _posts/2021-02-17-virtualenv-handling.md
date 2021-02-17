@@ -2,7 +2,7 @@
 date: 2021-02-17 03:29:42
 layout: post
 title: "Virtualenv handling"
-subtitle: a light virtualenv tutorial
+subtitle: an essential tutorial for virtualenv
 description:
 image: /assets/postimg/virtual-env.jpg
 optimized_image: /assets/postimg/virtual-env.jpg
