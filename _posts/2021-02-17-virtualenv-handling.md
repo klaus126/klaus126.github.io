@@ -4,8 +4,8 @@ layout: post
 title: "Virtualenv handling"
 subtitle: a light virtualenv tutorial
 description:
-image: /assets/postimg/vitual-env.jpg
-optimized_image: /assets/postimg/vitual-env.jpg
+image: /assets/postimg/virtual-env.jpg
+optimized_image: /assets/postimg/virtual-env.jpg
 category: environment
 tags:
     - virtualenv
