@@ -206,25 +206,25 @@ class MyViewController: UIViewController {
     
     // n-iii. 접속
     URLSession.shared.dataTask(with: requestURL) { [self] (data, response, error) in
-                                                 if error != nil {
-                                                   print(error?.localizedDescription)
-                                                   // p-iii. 로딩이 실패해도 로딩바는 꺼져야하므로
-                                                   ProgressHUD.dismiss()
-                                                   
-                                                   return
-                                                 }
-                                                  
-                                                  //n-iii-i. data parsing
-                                                  self.my = self.parsingJsonData(data: data!)
-                                                  
-                                                  //n-iii-ii, tableview renew
-                                                  OperationQueue.main.addOperation {
-                                                    self.tableView.reloadData()
-                                                    
-                                                    // p-ii. dismiss()
-                                                    ProgressHUD.dismiss()
-                                                  }
-                                                 }.resume()
+            if error != nil {
+            print(error?.localizedDescription)
+            // p-iii. 로딩이 실패해도 로딩바는 꺼져야하므로
+            ProgressHUD.dismiss()
+            
+            return
+            }
+            
+            //n-iii-i. data parsing
+            self.my = self.parsingJsonData(data: data!)
+            
+            //n-iii-ii, tableview renew
+            OperationQueue.main.addOperation {
+            self.tableView.reloadData()
+            
+            // p-ii. dismiss()
+            ProgressHUD.dismiss()
+            }
+            }.resume()
     
     
     
