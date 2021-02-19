@@ -138,20 +138,20 @@ class MyViewController: UIViewController {
     
     // n-iii. 접속
     URLSession.shared.dataTask(with: requestURL) { [self] (data, response, error) in
-                                                 if error != nil {
-                                                   print(error?.localizedDescription)
-                                                   return
-                                                 }
-                                                  
-                                                  //data parsing
-                                                  self.my = self.parsingJsonData(data: data!)
-                                                  
-                                                  //finally, tableview renew
-                                                  OperationQueue.main.addOperation {
-                                                    self.tableView.reloadData()
-                                                    
-                                                  }
-                                                 }.resume()
+            if error != nil {
+            print(error?.localizedDescription)
+            return
+            }
+            
+            //data parsing
+            self.my = self.parsingJsonData(data: data!)
+            
+            //finally, tableview renew
+            OperationQueue.main.addOperation {
+            self.tableView.reloadData()
+            
+            }
+            }.resume()
   }
 }
 ```
